@@ -23,11 +23,9 @@ public class BaseClass1 {
 				 driver = new ChromeDriver();
 			}else {
 				System.setProperty("webdriver.gecko.driver","C:\\Users\\Abhijit shinde\\Selenium\\geckodriver-v0.31.0-win64\\geckodriver.exe");
-
 				 driver = new FirefoxDriver();
 			}
-		
-		driver.get("https://www.flipkart.com/");
+			driver.get("https://www.flipkart.com/");
 			driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10));
 			driver.manage().window().maximize();
 			
