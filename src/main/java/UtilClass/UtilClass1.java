@@ -3,6 +3,7 @@ package UtilClass;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -11,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UtilClass1 {
 	static WebDriver driver;
@@ -33,4 +36,9 @@ public class UtilClass1 {
 	act.moveToElement(element).perform();
 	
 	}
+	public static void waitmethod() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(null));
+	}
+	
 }
